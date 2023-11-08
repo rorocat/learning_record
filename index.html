@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrapper {
+      padding: 20px;
+      background-color: darkgoldenrod;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="target">点击</div>
+  </div>
+  <script>
+    const wrapperEl = document.getElementById('wrapper');
+    const targetEl = document.getElementById('target');
+    wrapperEl.addEventListener('click', (e)=> {
+      console.log('wrapperEl');
+    });
+    targetEl.addEventListener('click', (e)=> {
+      console.log('target');
+    });
+
+  </script>
+  <script type="module">
+    import { obj, print } from './lib/moduleA.js';
+    print();
+    obj.a = 2;
+    print();
+  </script>
+</body>
+</html>
